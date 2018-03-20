@@ -50,6 +50,9 @@ namespace BungoNet.Controllers
         {
             if (ModelState.IsValid)
             {
+                bungo.RegistTime = DateTime.Now;
+                bungo.UpdateTime = DateTime.Now;
+
                 db.Bungoes.Add(bungo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,6 +85,8 @@ namespace BungoNet.Controllers
         {
             if (ModelState.IsValid)
             {
+                bungo.UpdateTime = DateTime.Now;
+
                 db.Entry(bungo).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
