@@ -29,5 +29,7 @@ namespace BungoNet.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<BungoNet.Models.Bungo> Bungoes { get; set; }
     }
 }
