@@ -17,7 +17,7 @@ namespace BungoNet.Controllers
         // GET: Bungoes
         public ActionResult Index()
         {
-            return View(db.Bungoes.ToList());
+            return View(db.Bungoes.OrderByDescending(b => b.UpdateTime));
         }
 
         // GET: Bungoes/Details/5
