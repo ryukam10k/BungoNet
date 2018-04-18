@@ -21,6 +21,9 @@
             @Html.DisplayNameFor(model => model.Meaning)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Tags)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.UpdateTime)
         </th>
         <th></th>
@@ -38,12 +41,15 @@
             @Html.DisplayFor(modelItem => item.Meaning)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Tags)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.UpdateTime)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
 }
